@@ -1,0 +1,317 @@
+<!DOCTYPE html> 
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cursos Online - Tio Meio Rico</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5ece3;
+      color: #4a3b2e;
+      min-height: 100vh;
+    }
+
+    header {
+      background: #8b5e3c;
+      color: #fff;
+      padding: 30px 0;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header .logo {
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      width: 100px; 
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      font-weight: bold;
+    }
+
+    main {
+      padding: 40px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 1200px;
+      margin: 40px auto;
+    }
+
+    button {
+      background-color: #a67c52;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      font-size: 16px;
+      margin: 10px 5px;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #8b5e3c;
+    }
+
+    footer {
+      background: #4a3b2e;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .form-section, .register-section {
+      padding: 60px 0;
+      background-color: #f7f1e9;
+    }
+
+    .form-section h2, .register-section h2 {
+      margin-bottom: 40px;
+      font-size: 2.5rem;
+      color: #6f4e37;
+    }
+
+    .installment-info {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      color: #4a3b2e;
+    }
+
+    .courses-section {
+      background-color: #f5ece3; 
+      padding: 60px 0;
+    }
+
+    .courses-section h2 {
+      margin-bottom: 40px;
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #6f4e37;
+    }
+
+    .course-card {
+      border: none;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .course-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .course-card img {
+      width: 100%;
+      height: auto;
+      border-bottom: 5px solid #a67c52;
+    }
+
+    .course-card-body {
+      padding: 20px;
+      background-color: #fff;
+    }
+
+    .course-card-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #6f4e37;
+    }
+
+    .course-card-price {
+      font-size: 1.5rem;
+      color: #8b5e3c;
+      margin-bottom: 10px;
+    }
+
+    .history-section {
+      padding: 60px 0;
+      background-color: #fdfcf5;
+    }
+
+    .history-section h2 {
+      margin-bottom: 40px;
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #6f4e37;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://tse4.mm.bing.net/th?id=OIG2.mQ8OTIk7_8xRcBI6NJbU&pid=ImgGn" alt="1" class="logo"> 
+    <h1>Seja um aprendiz do Tio Meio Rico!</h1>
+  </header>
+
+  <div class="container-full">
+    <main class="text-center">
+      <h2>Bem-vindo(a) à melhor plataforma de cursos do país.</h2>
+      <p>Temos os mais variados cursos para te auxiliar nas situações diárias.</p>
+      <button onclick="scrollToCourses()">Cursos do Tio Meio Rico</button>
+      <button>Login</button>
+      <p><small>Reconhecido em todo o território de cursos!</small></p>
+    </main>
+
+    <section class="register-section">
+      <div class="container">
+        <h2 class="text-center">Cadastro</h2>
+        <form>
+          <div class="form-group">
+            <label for="nome">Nome Completo</label>
+            <input type="text" class="form-control" id="nome" placeholder="Digite seu nome">
+          </div>
+          <div class="form-group">
+            <label for="usuario">Nome de Usuário</label>
+            <input type="text" class="form-control" id="usuario" placeholder="Digite seu nome de usuário">
+          </div>
+          <div class="form-group">
+            <label for="email">Endereço de Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Digite seu email">
+          </div>
+          <div class="form-group">
+            <label for="cep">CEP</label>
+            <input type="text" class="form-control" id="cep" placeholder="Digite seu CEP">
+          </div>
+          <div class="form-group">
+            <label for="endereco">Endereço Completo</label>
+            <input type="text" class="form-control" id="endereco" placeholder="Digite seu endereço completo">
+          </div>
+          <div class="form-group">
+            <label for="senha">Senha</label>
+            <input type="password" class="form-control" id="senha" placeholder="Digite uma senha">
+          </div>
+          <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="history-section">
+      <div class="container">
+        <h2 class="text-center">A História do Tio Meio Rico</h2>
+        <p>
+          O Tio Meio Rico começou sua jornada como um simples entusiasta de tecnologia e culinária exótica. Ao longo dos anos, ele acumulou conhecimentos valiosos que agora compartilha através de seus cursos. Sua paixão por ensinar e dar golpes online é admirável, sua abordagem única tornaram-no uma referência no mercado educacional e no mercado negro.
+        </p>
+      </div>
+    </section>
+
+    <section id="courses-section" class="courses-section">
+      <div class="container">
+        <h2 class="text-center">Cursos mais Vendidos</h2>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="course-card">
+              <img src="https://preview.redd.it/a-espera-acabou-chegou-o-t%C3%A3o-aguardado-urubu-do-pix-3-agora-v0-9tj8k301gnpb1.png?width=640&crop=smart&auto=webp&s=fca375daa194a4ded8bbac056086ee929e2f3f22" alt="Curso 1">
+              <div class="course-card-body">
+                <h5 class="course-card-title">Curso do Urubu do Pix</h5>
+                <p class="course-card-text">Aprofunde seus conhecimentos em golpes online.</p>
+                <p class="course-card-price">R$ 399,90</p>
+                <p class="installment-info">Ou em até 12x de R$33,32 sem juros!</p>
+                <a href="#payment-section" class="btn btn-primary" onclick="selectCourse(399.90)">Inscreva-se</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4">
+            <div class="course-card">
+              <img src="https://png.pngtree.com/png-vector/20240611/ourlarge/pngtree-from-farm-to-fork-a-gastronomic-journey-through-food-png-image_12701446.png" alt="Curso 2">
+              <div class="course-card-body">
+                <h5 class="course-card-title">Curso de Culinária Exótica</h5>
+                <p class="course-card-text">Descubra sabores do mundo e aprenda a cozinhar pratos incríveis!</p>
+                <p class="course-card-price">R$ 299,90</p>
+                <p class="installment-info">Ou em até 12x de R$24,99 sem juros!</p>
+                <a href="#payment-section" class="btn btn-primary" onclick="selectCourse(299.90)">Inscreva-se</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4">
+            <div class="course-card">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdGuB0LOmNYugwYk2OZYX1weuD85LK5eEYBA&s" alt="Curso 3">
+              <div class="course-card-body">
+                <h5 class="course-card-title">Curso de HTML e CSS</h5>
+                <p class="course-card-text">Aprenda a criar páginas web do zero com as melhores práticas!</p>
+                <p class="course-card-price">R$ 199,90</p>
+                <p class="installment-info">Ou em até 12x de R$16,65 sem juros!</p>
+                <a href="#payment-section" class="btn btn-primary" onclick="selectCourse(199.90)">Inscreva-se</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="payment-section" class="form-section">
+      <div class="container">
+        <h2 class="text-center">Pagamento</h2>
+        <form>
+          <div class="form-group">
+            <label for="courseSelect">Qual curso você está comprando?</label>
+            <select id="courseSelect" class="form-control">
+              <option value="399.90">Urubu do Pix - R$ 399,90</option>
+              <option value="299.90">Culinária - R$ 299,90</option>
+              <option value="199.90">HTML, CSS - R$ 199,90</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="cardNumber">Número do Cartão</label>
+            <input type="text" class="form-control" id="cardNumber" placeholder="Digite o número do cartão">
+          </div>
+          <div class="form-group">
+            <label for="cardName">Nome no Cartão</label>
+            <input type="text" class="form-control" id="cardName" placeholder="Nome como impresso no cartão">
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="expirationDate">Data de Validade</label>
+              <input type="text" class="form-control" id="expirationDate" placeholder="MM/AA">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="cvv">CVV</label>
+              <input type="text" class="form-control" id="cvv" placeholder="Código de segurança">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="cpf">CPF</label>
+            <input type="text" class="form-control" id="cpf" placeholder="Digite seu CPF">
+          </div>
+          <button type="submit" class="btn btn-primary">Finalizar Pagamento</button>
+        </form>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Cursos Online. Todos os direitos reservados ao Tio Meio Rico LTDA.</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    let coursePrice = 0;
+
+    function scrollToCourses() {
+      document.getElementById('courses-section').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function selectCourse(price) {
+      coursePrice = price;
+    }
+  </script>
+</body>
+</html> 
